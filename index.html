@@ -1,40 +1,213 @@
 <!doctype html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" href="dist/reset.css">
-		<link rel="stylesheet" href="dist/reveal.css">
-		<link rel="stylesheet" href="dist/theme/black.css">
+  <title>Blok by Blok Presentation</title>
 
-		<!-- Theme used for syntax highlighted code -->
-		<link rel="stylesheet" href="plugin/highlight/monokai.css">
-	</head>
-	<body>
-		<div class="reveal">
-			<div class="slides">
-				<section>Slide 1</section>
-				<section>Slide 2</section>
-			</div>
-		</div>
+  <link rel="stylesheet" href="dist/reset.css">
+  <link rel="stylesheet" href="dist/reveal.css">
+  <link rel="stylesheet" href="dist/theme/league.css">
 
-		<script src="dist/reveal.js"></script>
-		<script src="plugin/notes/notes.js"></script>
-		<script src="plugin/markdown/markdown.js"></script>
-		<script src="plugin/highlight/highlight.js"></script>
-		<script>
-			// More info about initialization & config:
-			// - https://revealjs.com/initialization/
-			// - https://revealjs.com/config/
-			Reveal.initialize({
-				hash: true,
+  <!-- Theme used for syntax highlighted code -->
+  <link rel="stylesheet" href="plugin/highlight/monokai.css">
+</head>
 
-				// Learn about plugins: https://revealjs.com/plugins/
-				plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
-			});
-		</script>
-	</body>
+<body>
+  <div class="reveal">
+    <div class="slides">
+      <section>
+        <h2>🗾 What is Blok by Blok</h2>
+        <ul>
+          <li>Next.js application powered by Storyblok</li>
+          <li>Dynamic content management with modern web technologies</li>
+        </ul>
+      </section>
+      <section>
+        <section>
+          <h2>💻 Core Feature Showcase</h2>
+        </section>
+        <section>
+          <h3>🚀 Modern Tech Stack</h3>
+          <ul>
+            <li>React 19 with Next.js 15 and App Router</li>
+            <li>TypeScript for type saftey</li>
+            <li>Storyblok CMS Integration</li>
+          </ul>
+        </section>
+        <section>
+          <h3>🔄 Dynamic Content Management</h3>
+          <ul>
+            <li>Draft mode</li>
+            <li>Environment switching</li>
+            <li>Real-time content updates</li>
+          </ul>
+          <img src="assets/blokbyblok-envcontrols.png" alt=""
+            style="margin: 1rem 0 0; max-height: 60%; max-width: 60%;">
+        </section>
+        <section>
+          <h3>📱 Developer Experience</h3>
+          <ul>
+            <li>🐌 Dynamic Slug-based routing</li>
+            <li>🍪 Cookie-based state management</li>
+            <li>📰 Markdown rendering capabilities</li>
+          </ul>
+        </section>
+      </section>
+      <section class="reveal">
+        <h2>🤿 Architecture Deep Dive</h2>
+        <pre class="stretch" style="font-size: 0.96rem;"><code>
+          blok-by-blok/
+          ├── src/
+          │ ├── app/ # Next.js App Router
+          │ │ ├── globals.css # Global CSS styles
+          │ │ ├── layout.tsx # Root layout component
+          │ │ ├── page.tsx # Home page component
+          │ │ ├── favicon.ico # App favicon
+          │ │ ├── [slug]/ # Dynamic routing for Storyblok pages
+          │ │ │ └── page.tsx # Dynamic page component
+          │ │ └── api/ # Utility API routes
+          │ │ ├── clear-cookies/
+          │ │ │ └── route.ts # Clear environment/draft cookies
+          │ │ ├── set-draft-mode/
+          │ │ │ └── route.ts # Enable/disable draft mode
+          │ │ └── set-environment/
+          │ │ └── route.ts # Switch between environments
+          │ ├── components/ # Reusable UI components
+          │ │ ├── CookieNotice.tsx # Cookie consent notice
+          │ │ ├── EnvironmentToggle.tsx # Environment Controls
+          │ │ └── Markdown.tsx # Markdown content renderer
+          │ ├── types/
+          │ │ └── blokTypes.ts # Storyblok type definitions
+          │ └── utils/
+          │ └── storyblok.ts # Storyblok API utilities
+          ├── package.json # Dependencies and scripts
+          ├── tsconfig.json # TypeScript configuration
+          └── README.md # Project documentation
+        </code></pre>
+        <aside class="notes">
+          <h4>Project Structure Overview</h4>
+          <ul>
+            <li>Show the clean folder organization from src</li>
+            <li>Highlight separation of concerns (components, types, utils, API routes)</li>
+          </ul>
+          <h4>Dynamic Routing System</h4>
+          <ul>
+            <li>
+              Demonstrate <code>[slug]/page.tsx</code> implementation
+            </li>
+            <li>Show how CMS slugs automatically create pages</li>
+          </ul>
+          <h4>API Integration Layer</h4>
+          <ul>
+            <li>
+              <code>utils/storyblok.ts</code> utilities
+            </li>
+            <li>Environment configuration management</li>
+          </ul>
+
+          <h4>Type Safety Implementation</h4>
+          <ul>
+            <li>
+              <code>types/blokTypes.ts</code> interfaces
+            </li>
+            <li>TypeScript integration throughout the app</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <section>
+          <h2>🤺 Live Demo</h2>
+        </section>
+        <section>
+          <h3>▲ Vercel Overview</h3>
+          <aside class="notes">
+            <h3>▲ Vercel Overview</h3>
+            <ul>
+              <li>Show the Vercel dashboard</li>
+              <li>Highlight deployment status, environments, environment variables, analytics, speed-insights</li>
+            </ul>
+          </aside>
+        </section>
+        <section>
+          <h3>🏠 Homepage Walkthrough</h3>
+          <ul>
+            <li>Story listing from <code>page.tsx</code></li>
+            <li>Dynamic content loading from Storyblok</li>
+          </ul>
+          <aside class="notes">
+            <h3>🏠 Homepage Walkthrough</h3>
+            <ul>
+              <li>Story listing from <code>page.tsx</code></li>
+              <li>Dynamic content loading from Storyblok</li>
+            </ul>
+          </aside>
+        </section>
+        <section>
+          <h3>🧭 Dynamic Page Navigation</h3>
+          <ul>
+            <li>Click through to individual story pages</li>
+            <li>Demonstrate slug-based routing in action</li>
+          </ul>
+          <aside class="notes">
+            <h3>🧭 Dynamic Page Navigation</h3>
+            <ul>
+              <li>Click through to individual story pages</li>
+              <li>Demonstrate slug-based routing in action</li>
+            </ul>
+          </aside>
+        </section>
+        <section>
+          <h3>⚙️ Development Features</h3>
+          <ul>
+            <li>Environment toggle functionality</li>
+            <li>Draft mode switching</li>
+            <li>Cookie management system</li>
+          </ul>
+          <aside class="notes">
+            <h3>⚙️ Development Features</h3>
+            <ul>
+              <li>Environment toggle functionality</li>
+              <li>Draft mode switching</li>
+              <li>Cookie management system</li>
+            </ul>
+          </aside>
+        </section>
+      </section>
+      <section>
+        <h2>❓ Questions & Discussion</h2>
+        <ul>
+          <li>Open floor for questions</li>
+          <li>Discuss potential improvements</li>
+        </ul>
+        <aside class="notes">
+          <h3>❓ Questions & Discussion</h3>
+          <ul>
+            <li>Open floor for questions</li>
+            <li>Discuss potential improvements</li>
+          </ul>
+        </aside>
+      </section>
+    </div>
+  </div>
+
+  <script src="dist/reveal.js"></script>
+  <script src="plugin/notes/notes.js"></script>
+  <script src="plugin/markdown/markdown.js"></script>
+  <script src="plugin/highlight/highlight.js"></script>
+  <script>
+    // More info about initialization & config:
+    // - https://revealjs.com/initialization/
+    // - https://revealjs.com/config/
+    Reveal.initialize({
+      hash: true,
+
+      // Learn about plugins: https://revealjs.com/plugins/
+      plugins: [RevealMarkdown, RevealHighlight, RevealNotes]
+    });
+  </script>
+</body>
+
 </html>
