@@ -20,37 +20,50 @@
     <div class="slides">
       <section>
         <h1>Blok by Blok</h1>
-        <h2>Storyblok Challange Presentation</h2>
+        <h2>Storyblok Challenge Presentation</h2>
         <p class="date">19 August 2025</p>
         <p class="author">Presented by: Bryan Gulley</p>
       </section>
       <section>
         <h2><img src="assets/Bryan_Cartoon_xxs.png" alt="avatar" style="height: 5rem; margin: 0;"> Introduction
         </h2>
-        <ul>
-          <li>Who am I?</li>
-          <li>What is Blok by Blok?</li>
-        </ul>
+        <p>Hi, I'm Bryan Gulley, a software engineer with a passion for building modern web applications.</p>
         <aside class="notes">
           <h3>👋 Introduction</h3>
           <ul>
-            <li>Brief personal introduction</li>
-            <li>Overview of the presentation structure</li>
+            <li>Brief personal introduction
+              <ul>
+                <li>Passion for tech stated in USAF building gaming PCs, Making Map Portals</li>
+                <li>Experience as a developer started 2008 w/ SharePoint</li>
+                <li>Moved into traditional FED in 2010</li>
+                <li>Currently passionate about modern web tech, dev enablement, community engagement, and motorcycles
+                </li>
+              </ul>
+            </li>
+            <li>Overview of the presentation structure - "today we'll be going through"</li>
             <ol>
-              <li>Introduction</li>
               <li>What is Blok by Blok</li>
+              <li>My Approach</li>
               <li>Core Feature Showcase</li>
               <li>Architecture Deep Dive</li>
               <li>Live Demo</li>
               <li>Questions & Discussion</li>
             </ol>
-            <li>Set expectations for the session</li>
+            <li>My setup
+              <ul>
+                <li>Surface Pro - Windows vs macOS</li>
+                <li>VS Code with Starship shell</li>
+                <li>Volta for managing Node.js versions and packages</li>
+                <li>Reveal.js for presentation</li>
+              </ul>
+            </li>
+            <li>Set expectations for the session - Save questions I distract easily</li>
           </ul>
         </aside>
       </section>
       <section>
         <h2>🗾 What is Blok by Blok</h2>
-        <p>Basic app to render blog posts
+        <p>Basic web app to render blog posts
           <br>Using Storyblok Content Delivery API<br>
           <br>Built with<br>React <svg xmlns="http://www.w3.org/2000/svg" viewBox="-11.5 -10.23174 23 20.46348"
             height="1.5rem">
@@ -81,26 +94,52 @@
         </p>
         <aside class="notes">
           <h3>🗾 What is Blok by Blok</h3>
-          <p>Basic Next.js app using Storyblok Content Delivery API to render blog posts</p>
-          <p>React, TS, Next, Tailwind, Storyblok Content API</p>
           <ul>
-            <li>Challenge - "How to implement a blog website with a preview and a production environment"</li>
-            <li>Solution - Headless CMS with modern framework</li>
-            <li>Talk about throught process
-              <ol>
-                <li>Identify the problem</li>
-                <li>Identify the goals</li>
-                <li>Identify the constraints - reference the PDF</li>
-                <li>Identify the assumptions - this is where you went down a rabbit hole</li>
-                <li>Identify the risks - the rabbit hole derailed you for half a day</li>
-                <li>Identify the requirements - back to the document</li>
-                <li>Ask clarifying questions</li>
-                <li>Plan - Estimate, Pseudo Code, etc</li>
-                <li>Execute - Build, Test, Refine</li>
-                <li>Deliver - Present, Document, Handoff</li>
-              </ol>
+            <li> Blok by Blok is a web app aimed at solving - "How to implement a blog website with a preview and a
+              production environment"
+            </li>
+            <li>Using React, TypeScript, Next.js, TailwindCSS, and Storyblok Content Delivery API</li>
+          </ul>
+        </aside>
+      </section>
+      <section>
+        <h2>🧠 My Approach</h2>
+        <ul>
+          <li>Plan - Identify, Estimate, Design</li>
+          <li>Execute - Build, Test, Refine, Review</li>
+          <li>Deliver - Document, Present, Handoff</li>
+        </ul>
+        <aside class="notes">
+          <h3>🧠 Approach</h3>
+          <ul>
+            <li>
+              <div>Plan - Identify, Estimate, Design - Reference the PDF</div>
+              <div>
+                <ul>
+                  <li>Identify problem, goals, requirements, constraints, risks</li>
+                  <li>Estimate time and resources needed - time boxing, expectation(1wk), etc</li>
+                  <li>Design architecture and user experience - Pseudo Code, Whiteboards(Miro, Excalidraw),
+                    Wireframe(Figma, Zeplin, Invision)</li>
+                </ul>
+              </div>
+            </li>
+            <li>Execute - Build, Test, Refine, Review
+              <ul>
+                <li>Discuss rabbit hole due to false assumption</li>
+                <li>Storyblok Config Branch</li>
+                <li>Storyblok Blueprint</li>
+                <li>Wait a min... content already exists - back to PDF - just build an app that fetches the data</li>
+              </ul>
+            </li>
+            <li>Deliver - Document, Present, Handoff
+              <ul>
+                <li>Document - Code comments, Readme</li>
+                <li>Present findings and demo</li>
+                <li>Handoff to stakeholders or team</li>
+              </ul>
             </li>
           </ul>
+          <p>Emphasize the iterative nature of the process</p>
         </aside>
       </section>
       <section>
@@ -112,14 +151,20 @@
           <ul>
             <li>React 19 with Next.js 15 and App Router</li>
             <li>TypeScript for type safety</li>
+            <li>TailwindCSS for styling</li>
             <li>Storyblok CD API Integration</li>
           </ul>
+          <aside class="notes">
+            Next slide you'll see a panel, hover wasn't working because I'm using a surface (touch device)
+            <br>
+            Briefly explain tailwind v4 hover fix
+          </aside>
         </section>
         <section>
           <h3>🔄 Dynamic Content Management</h3>
           <ul>
-            <li>Draft mode</li>
             <li>Environment switching</li>
+            <li>Draft mode</li>
             <li>Real-time content updates</li>
           </ul>
           <img src="assets/blokbyblok-envcontrols.png" alt=""
@@ -173,6 +218,7 @@
           </ul>
           <h4>Dynamic Routing System</h4>
           <ul>
+            <li>Strategy Pattern (content fetching) - Production, Preview, Dynamic Tokens</li>
             <li>
               Demonstrate <code>[slug]/page.tsx</code> implementation
             </li>
@@ -180,6 +226,7 @@
           </ul>
           <h4>API Integration Layer</h4>
           <ul>
+            <li>Factory Pattern - `getStoryblokConfig`</li>
             <li>
               <code>utils/storyblok.ts</code> utilities
             </li>
@@ -196,7 +243,7 @@
           <ul>
             <li>Cookie consent management</li>
             <li>Environment toggle controls</li>
-            <li>Markdown rendering component</li>
+            <li>Markdown rendering component - Adapter Pattern</li>
           </ul>
         </aside>
       </section>
@@ -274,14 +321,41 @@
       <section>
         <h2>❓ Questions & Discussion</h2>
         <ul>
-          <li>Open floor for questions</li>
           <li>Discuss potential improvements</li>
+          <li>Open floor for questions</li>
         </ul>
         <aside class="notes">
           <h3>❓ Questions & Discussion</h3>
           <ul>
+            <li>Discuss potential improvements
+              <ul>
+                <li>Performance
+                  <ul>
+                    <li>Implement caching strategies for Storyblok API responses</li>
+                    <li>Optimize image loading with Next.js Image component</li>
+                  </ul>
+                </li>
+                <li>Developer Experience
+                  <ul>
+                    <li>Integrate Storyblok Visual Editor for in-context editing</li>
+                    <li>Add unit and integration tests using Jest and React Testing Library</li>
+                  </ul>
+                </li>
+                <li>Production Readiness
+                  <ul>
+                    <li>Set up CI/CD pipelines for automated testing and deployment</li>
+                    <li>Implement monitoring and logging for better observability</li>
+                  </ul>
+                </li>
+                <li>Future-proofing
+                  <ul>
+                    <li>Plan for scalability with modular architecture</li>
+                    <li>Stay updated with latest Next.js and React features</li>
+                  </ul>
+                </li>
+              </ul>
+            </li>
             <li>Open floor for questions</li>
-            <li>Discuss potential improvements</li>
           </ul>
         </aside>
       </section>
